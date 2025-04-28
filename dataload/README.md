@@ -19,6 +19,11 @@ script is for automating the process of getting the historical data from the Kag
 contains scripts for data analysis using pyspark. spark.read gives access for spark to read the data frame, inferSchema set to true tells spark to not to treat the columns as string. this tells spark to look at the datatype with in each column. As pySpark supports SQL like structure to query the data and as spark is reading the data frames, Select method from pyspark is used to select necessary columns to create a subset of data.We can create temporary dataframes with in spark session. createOrReplaceTempView is a pyspark data frame method create a temporary view with in spark session. spark lets sql like queries to apply on temporary views. Table join query is performed using spark.sql() . Tables can be joined by different conditions such as inner join, left or right join just like sql. New columns are added where required.Defining structure type while reading the dataframe in spark gives better control over defining 
 datatypes while reading data from csv for JSON. It helps faster processing of dataframes which is essential component for big data processing particularly in real time. 
 
+# ml.py, Linear Regression on Driver wins
+PySpark is designed to work with large volumes of data. In the context of Formula 1, Machine Learning helps to force outcomes, predict wins, laptimes, and perform time series analysis. Pyspark ML libraries provide the necessary libraries just like Python to operate in a big data environment, which can be trained on distributed data. Table II shows actual wins Vs predicted average wins on performing Linear regression on the Drivers' standings data. Model accuracy measured in Root Mean Square (RMSE) of 0.7113 shows that model predictions differ from actual by 7.1% percent. This can be improved my adding more features such as lap times, weather, and driver standings.
+
+![image alt](https://github.com/x23425237/DataIntensive_CA2/blob/main/linearRegression.jpg)
+
 # Data Orchestration using Airflow
 docker-compose.yaml is used to configure Apache Airflow in docker container using PostgreSQL as a database. Data volumes are mounted inside docker so that airflow con access the files with in docker container.
 
@@ -26,3 +31,9 @@ docker-compose.yaml is used to configure Apache Airflow in docker container usin
 # dag_createTable.py,dag10_uploadMultiple.py,dag11_aws.py,loadPG_manual.py,
 Several dags are created to automate data orchestration of real time data. To mimic real time data transfer between AWS S3 into PostgreSQL and transfer of historic data into PostgreSQL. The dags are scheduled to run daily to mimic real time environment.dag11\_aws is designed to transfer data retrieved from AWS S3. dag10\_uploadMultiple scripts loads several historic race details into PostgreSQL on daily basis
 
+
+# Data Visualization in Power BI
+
+![image alt](https://github.com/x23425237/DataIntensive_CA2/blob/main/powerBI1.jpg)
+![image alt](https://github.com/x23425237/DataIntensive_CA2/blob/main/powerBI2.jpg)
+![image alt](https://github.com/x23425237/DataIntensive_CA2/blob/main/rpm.jpg)
