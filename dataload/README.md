@@ -25,11 +25,11 @@ PySpark is designed to work with large volumes of data. In the context of Formul
 ![image alt](https://github.com/x23425237/DataIntensive_CA2/blob/main/linearRegression.jpg)
 
 # Data Orchestration using Airflow
-docker-compose.yaml is used to configure Apache Airflow in docker container using PostgreSQL as a database. Data volumes are mounted inside docker so that airflow con access the files with in docker container.
+docker-compose.yaml is used to configure Apache Airflow in docker container using PostgreSQL as a database. Data volumes are mounted inside docker so that airflow can access the files with in docker container.
 
 
 # dag_createTable.py,dag10_uploadMultiple.py,dag11_aws.py,loadPG_manual.py,
-Several dags are created to automate data orchestration of real time data. To mimic real time data transfer between AWS S3 into PostgreSQL and transfer of historic data into PostgreSQL. The dags are scheduled to run daily to mimic real time environment.dag11\_aws is designed to transfer data retrieved from AWS S3. dag10\_uploadMultiple scripts loads several historic race details into PostgreSQL on daily basis
+Several dags are created to automate data orchestration of real time data. To mimic real time data transfer between AWS S3 into PostgreSQL and transfer of historic data into PostgreSQL. The dags are scheduled to run daily to mimic real time environment.dag11_aws is designed to transfer data retrieved from AWS S3. dag10_uploadMultiple scripts loads several historic race details into PostgreSQL on daily basis
 
 
 # Data Visualization in Power BI
